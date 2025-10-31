@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understandable math || JadvalZarb</title>
+    <style>
+        /* تعریف فونت */
+        @font-face {
+            font-family: 'JadvalFont';
+            src: url('./fontm/jadval.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'JadvalFont', 'Vazir', Tahoma, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            color: white;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .table-section {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            color: #2575fc;
+            border-bottom: 3px solid #6a11cb;
+            padding-bottom: 10px;
+        }
+
+        .tables-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .number-column {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            min-width: 150px;
+        }
+
+        .number-title {
+            text-align: center;
+            font-size: 1.6rem;
+            color: #6a11cb;
+            margin-bottom: 10px;
+            padding: 8px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .multiplication-item {
+            background: white;
+            border-radius: 12px;
+            padding: 15px 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            font-size: 1.3rem;
+            color: #333;
+            border: 2px solid transparent;
+        }
+
+        .multiplication-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            border-color: #6a11cb;
+        }
+
+        /* رنگ‌های مختلف برای هر ستون */
+        .col-1 .multiplication-item { background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%); }
+        .col-2 .multiplication-item { background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); }
+        .col-3 .multiplication-item { background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%); }
+        .col-4 .multiplication-item { background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%); }
+        .col-5 .multiplication-item { background: linear-gradient(135deg, #a6c0fe 0%, #f68084 100%); }
+        .col-6 .multiplication-item { background: linear-gradient(135deg, #fccb90 0%, #d57eeb 100%); }
+        .col-7 .multiplication-item { background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%); }
+        .col-8 .multiplication-item { background: linear-gradient(135deg, #fad0c4 0%, #ffd1ff 100%); }
+        .col-9 .multiplication-item { background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); }
+        .col-10 .multiplication-item { background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%); }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            color: white;
+            opacity: 0.8;
+            font-size: 0.9rem;
+            padding: 20px;
+        }
+
+        /* طراحی واکنش‌گرا */
+        @media (max-width: 768px) {
+            .tables-container {
+                gap: 15px;
+            }
+            
+            .number-column {
+                min-width: 130px;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .multiplication-item {
+                font-size: 1.1rem;
+                padding: 12px 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .tables-container {
+                gap: 10px;
+            }
+            
+            .number-column {
+                min-width: 110px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .multiplication-item {
+                font-size: 1rem;
+                padding: 10px 5px;
+            }
+            
+            .number-title {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>جدول ضرب مدرن</h1>
+        <p class="subtitle">یادگیری ریاضیات به زیباترین شکل ممکن</p>
+    </header>
+    
+    <div class="container">
+        <section class="table-section">
+            <h2 class="section-title">جدول ضرب ۱ تا ۵</h2>
+            <div class="tables-container" id="table1to5">
+                <!-- جدول ضرب ۱ تا ۵ اینجا تولید می‌شود -->
+            </div>
+        </section>
+        
+        <section class="table-section">
+            <h2 class="section-title">جدول ضرب ۶ تا ۱۰</h2>
+            <div class="tables-container" id="table6to10">
+                <!-- جدول ضرب ۶ تا ۱۰ اینجا تولید می‌شود -->
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <p>طراحی شده با ❤️ برای یادگیری آسان ریاضی</p>
+    </footer>
+
+    <script>
+        // تابع برای تولید جدول ضرب برای یک عدد خاص
+        function generateMultiplicationTable(number, container) {
+            const column = document.createElement('div');
+            column.className = `number-column col-${number}`;
+            
+            const title = document.createElement('div');
+            title.className = 'number-title';
+            title.textContent = `عدد ${number}`;
+            column.appendChild(title);
+            
+            for (let i = 1; i <= 10; i++) {
+                const item = document.createElement('div');
+                item.className = 'multiplication-item';
+                item.textContent = `${number} × ${i} = ${number * i}`;
+                column.appendChild(item);
+            }
+            
+            container.appendChild(column);
+        }
+
+        // تولید جدول‌ها
+        const table1to5 = document.getElementById('table1to5');
+        const table6to10 = document.getElementById('table6to10');
+        
+        // تولید جدول ۱ تا ۵
+        for (let i = 1; i <= 5; i++) {
+            generateMultiplicationTable(i, table1to5);
+        }
+        
+        // تولید جدول ۶ تا ۱۰
+        for (let i = 6; i <= 10; i++) {
+            generateMultiplicationTable(i, table6to10);
+        }
+    </script>
+</body>
+</html>
