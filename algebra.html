@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جدول جبر ۱ تا ۱۰۰</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Vazir', 'Segoe UI', Tahoma, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ffa726 100%);
+            color: #333;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            color: white;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            color: #ff6b6b;
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .Jabr {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            font-size: 1.3rem;
+            padding: 18px 35px;
+        }
+
+        .algebra-table {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .table-section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 1.8rem;
+            color: #4facfe;
+            margin-bottom: 25px;
+            border-bottom: 3px solid #ffa726;
+            padding-bottom: 10px;
+        }
+
+        .algebra-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .algebra-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-right: 5px solid #4facfe;
+            transition: all 0.3s ease;
+        }
+
+        .algebra-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .algebra-title {
+            font-size: 1.4rem;
+            color: #ff6b6b;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .algebra-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .formula {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            border-right: 3px solid #ffa726;
+            font-family: monospace;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .nav-btn {
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
+            
+            .Jabr {
+                font-size: 1.1rem;
+                padding: 15px 30px;
+            }
+            
+            .algebra-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>جدول جبر ۱ تا ۱۰۰</h1>
+            <p class="subtitle">فرمول‌ها و روابط جبری پایه</p>
+        </header>
+a,f,h,j ....( متغیر هستن)
+        <div class="navigation">
+            <button class="nav-btn" onclick="location.href='index.html'">صفحه اصلی</button>
+            <button class="nav-btn" onclick="location.href='multiplication-table.html'">جدول ضرب</button>
+            <button class="nav-btn Jabr">جبر</button>
+        </div>
+
+        <div class="algebra-table">
+            <div class="table-section">
+                <h2 class="section-title">فرمول‌های پایه جبر</h2>
+                <div class="algebra-grid">
+                    <div class="algebra-card">
+                        <h3 class="algebra-title">مربع اعداد</h3>
+                        <div class="algebra-content">
+                            <div class="formula">(a + b)² = a² + 2ab + b²</div>
+                            <div class="formula">(a - b)² = a² - 2ab + b²</div>
+                            <div class="formula">a² - b² = (a - b)(a + b)</div>
+                        </div>
+                    </div>
+
+                    <div class="algebra-card">
+                        <h3 class="algebra-title">مکعب اعداد</h3>
+                        <div class="algebra-content">
+                            <div class="formula">(a + b)³ = a³ + 3a²b + 3ab² + b³</div>
+                            <div class="formula">(a - b)³ = a³ - 3a²b + 3ab² - b³</div>
+                            <div class="formula">a³ + b³ = (a + b)(a² - ab + b²)</div>
+                        </div>
+                    </div>
+
+                    <div class="algebra-card">
+                        <h3 class="algebra-title">معادلات درجه دوم</h3>
+                        <div class="algebra-content">
+                            <div class="formula">ax² + bx + c = 0</div>
+                            <div class="formula">x = [-b ± √(b² - 4ac)] / 2a</div>
+                            <div class="formula">Δ = b² - 4ac</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-section">
+                <h2 class="section-title">رابطه‌های عددی</h2>
+                <div class="algebra-grid">
+                    <div class="algebra-card">
+                        <h3 class="algebra-title">اعداد زوج و فرد</h3>
+                        <div class="algebra-content">
+                            <div class="formula">زوج + زوج = زوج</div>
+                            <div class="formula">فرد + فرد = زوج</div>
+                            <div class="formula">زوج + فرد = فرد</div>
+                            <div class="formula">زوج × زوج = زوج</div>
+                            <div class="formula">فرد × فرد = فرد</div>
+                        </div>
+                    </div>
+
+                    <div class="algebra-card">
+                        <h3 class="algebra-title">ویژگی‌های ضرب</h3>
+                        <div class="algebra-content">
+                            <div class="formula">a × b = b × a</div>
+                            <div class="formula">a × (b + c) = ab + ac</div>
+                            <div class="formula">a × (b - c) = ab - ac</div>
+                            <div class="formula">a × 0 = 0</div>
+                            <div class="formula">a × 1 = a</div>
+                        </div>
+                    </div>
+
+                    <div class="algebra-card">
+                        <h3 class="algebra-title">توان و رادیکال</h3>
+                        <div class="algebra-content">
+                            <div class="formula">aᵐ × aⁿ = aᵐ⁺ⁿ</div>
+                            <div class="formula">aᵐ ÷ aⁿ = aᵐ⁻ⁿ</div>
+                            <div class="formula">(aᵐ)ⁿ = aᵐⁿ</div>
+                            <div class="formula">√(ab) = √a × √b</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>طراحی شده|| ۱۴۰۴</p>
+        </footer>
+    </div>
+</body>
+  </html>
